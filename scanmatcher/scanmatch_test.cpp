@@ -1,17 +1,19 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
-#include <log/carmenconfiguration.h>
-#include <log/sensorlog.h>
-#include <unistd.h>
-#include <utils/commandline.h>
-#include <log/sensorstream.h>
-#include "scanmatcherprocessor.h"
+#include <gmapping/log/carmenconfiguration.h>
+#include <gmapping/log/sensorlog.h>
+#ifndef _WIN32
+  #include <unistd.h>
+#endif
+#include <gmapping/utils/commandline.h>
+#include <gmapping/log/sensorstream.h>
+#include "gmapping/scanmatcher/scanmatcherprocessor.h"
 
 using namespace std;
 using namespace GMapping;
 
-#define DEBUG cout << __PRETTY_FUNCTION__
+#define DEBUG cout << __func__
 #define MAX_STRING_LENGTH 1024
 
 int main(int argc, const char * const * argv){

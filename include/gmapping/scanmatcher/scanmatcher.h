@@ -1,17 +1,18 @@
 #ifndef SCANMATCHER_H
 #define SCANMATCHER_H
 
-#include "icp.h"
-#include "smmap.h"
+#include "gmapping/scanmatcher/icp.h"
+#include "gmapping/scanmatcher/smmap.h"
 #include <gmapping/utils/macro_params.h>
 #include <gmapping/utils/stat.h>
 #include <iostream>
 #include <gmapping/utils/gvalues.h>
+#include <gmapping/scanmatcher/scanmatcher_export.h>
 #define LASER_MAXBEAMS 2048
 
 namespace GMapping {
 
-class ScanMatcher{
+class SCANMATCHER_EXPORT ScanMatcher{
 	public:
 		typedef Covariance3 CovarianceMatrix;
 		

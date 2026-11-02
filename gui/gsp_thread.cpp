@@ -5,13 +5,12 @@
  * GMAPPING Copyright (c) 2004 Giorgio Grisetti, 
  * Cyrill Stachniss, and Wolfram Burgard
  *
- * This software is licensed under the "Creative Commons 
- * License (Attribution-NonCommercial-ShareAlike 2.0)" 
+ * This software is licensed under the 3-Clause BSD License
  * and is copyrighted by Giorgio Grisetti, Cyrill Stachniss, 
  * and Wolfram Burgard.
  * 
  * Further information on this license can be found at:
- * http://creativecommons.org/licenses/by-nc-sa/2.0/
+ * https://opensource.org/licenses/BSD-3-Clause
  * 
  * GMAPPING is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied 
@@ -21,16 +20,16 @@
  *****************************************************************/
 
 
-#include "gsp_thread.h"
-#include <utils/commandline.h>
-#include <utils/stat.h>
-#include <configfile/configfile.h>
+#include "gmapping/gui/gsp_thread.h"
+#include <gmapping/utils/commandline.h>
+#include <gmapping/utils/stat.h>
+#include <gmapping/configfile/configfile.h>
 
 #ifdef CARMEN_SUPPORT
-	#include <carmenwrapper/carmenwrapper.h>
+	#include <gmapping/carmenwrapper/carmenwrapper.h>
 #endif
 
-#define DEBUG cout << __PRETTY_FUNCTION__
+#define DEBUG cout << __func__
 
 using namespace std;
 
