@@ -8,11 +8,12 @@
 #include <gmapping/sensor/sensor_range/rangesensor.h>
 #include <gmapping/sensor/sensor_odometry/odometryreading.h>
 #include <gmapping/sensor/sensor_range/rangereading.h>
-#include "configuration.h"
+#include "gmapping/log/configuration.h"
+#include <gmapping/log/log_export.h>
 
 namespace GMapping {
 
-class SensorLog : public std::list<SensorReading*>{
+class LOG_EXPORT SensorLog : public std::list<SensorReading*>{
 	public:
 		SensorLog(const SensorMap&);
 		~SensorLog();

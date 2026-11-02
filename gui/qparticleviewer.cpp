@@ -5,13 +5,12 @@
  * GMAPPING Copyright (c) 2004 Giorgio Grisetti, 
  * Cyrill Stachniss, and Wolfram Burgard
  *
- * This software is licensed under the "Creative Commons 
- * License (Attribution-NonCommercial-ShareAlike 2.0)" 
+ * This software is licensed under the 3-Clause BSD License
  * and is copyrighted by Giorgio Grisetti, Cyrill Stachniss, 
  * and Wolfram Burgard.
  * 
  * Further information on this license can be found at:
- * http://creativecommons.org/licenses/by-nc-sa/2.0/
+ * https://opensource.org/licenses/BSD-3-Clause
  * 
  * GMAPPING is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied 
@@ -21,7 +20,7 @@
  *****************************************************************/
 
 
-#include "qparticleviewer.h"
+#include "gmapping/gui/qparticleviewer.h"
 #include "moc_qparticleviewer.cpp"
 #include <qimage.h>
 
@@ -202,7 +201,7 @@ void QParticleViewer::drawMap(const ScanMatcherMap& map){
   Point wmax=Point(pic2map(IntPoint(m_pixmap->width()/2,-m_pixmap->height()/2)));
   IntPoint imin=map.world2map(wmin);
   IntPoint imax=map.world2map(wmax);
-  /*	cout << __PRETTY_FUNCTION__ << endl;
+  /*	cout << __func__ << endl;
 	cout << " viewCenter=" << viewCenter.x << "," << viewCenter.y <<   endl;	
 	cout << " wmin=" << wmin.x << "," << wmin.y <<  " wmax=" << wmax.x << "," << wmax.y << endl;	
 	cout << " imin=" << imin.x << "," << imin.y <<  " imax=" << imax.x << "," << imax.y << endl;

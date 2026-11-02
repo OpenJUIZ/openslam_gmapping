@@ -1,6 +1,6 @@
 #include <assert.h>
 #include <sstream>
-#include "sensorstream.h"
+#include "gmapping/log/sensorstream.h"
 //#define LINEBUFFER_SIZE 1000000 //for not Cyrill to unbless me, it is better to exagerate :-))
 // Can't declare a buffer that big on the stack.  So we'll risk Cyrill's
 // unblessing, and make it smaller.
@@ -66,7 +66,7 @@ OdometryReading* SensorStream::parseOdometry(std::istream& is, const OdometrySen
 }
 
 RangeReading* SensorStream::parseRange(std::istream& is, const RangeSensor* rs){
-	//cerr << __PRETTY_FUNCTION__ << endl;
+	//cerr << __func__ << endl;
 	if(rs->newFormat){
 		string laser_type, start_angle, field_of_view, angular_resolution, maximum_range, accuracy, remission_mode;
 		is >> laser_type>> start_angle>> field_of_view>> angular_resolution>> maximum_range>> accuracy>> remission_mode;
